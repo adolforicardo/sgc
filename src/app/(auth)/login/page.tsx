@@ -75,7 +75,7 @@ export default function LoginPage() {
           </div>
         </div>
         <p className="text-slate-500 text-sm">
-          © 2025 SGC. Solução enterprise para recrutamento.
+          © 2026 SGC. Solução enterprise para recrutamento.
         </p>
       </div>
 
