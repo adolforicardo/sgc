@@ -59,7 +59,7 @@ export default function JobDetailPage() {
     <>
       <PageHeader
         title={job.title}
-        subtitle={`Criada em ${new Date(job.createdAt).toLocaleDateString('pt-PT')}`}
+        subtitle={`Criada em ${new Date(job.createdAt).toLocaleDateString('pt-MZ')}`}
         breadcrumbs={[
           { label: 'Dashboard', href: ROUTES.DASHBOARD },
           { label: 'Vagas', href: ROUTES.JOBS },
@@ -97,12 +97,12 @@ export default function JobDetailPage() {
           </Card>
           <Card className="!p-4">
             <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Prazo</p>
-            <p className="font-semibold text-slate-900 mt-1">{new Date(job.deadline).toLocaleDateString('pt-PT')}</p>
+            <p className="font-semibold text-slate-900 mt-1">{new Date(job.deadline).toLocaleDateString('pt-MZ')}</p>
           </Card>
           <Card className="!p-4">
             <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Publicada</p>
             <p className="font-semibold text-slate-900 mt-1">
-              {job.publishedAt ? new Date(job.publishedAt).toLocaleDateString('pt-PT') : '—'}
+              {job.publishedAt ? new Date(job.publishedAt).toLocaleDateString('pt-MZ') : '—'}
             </p>
           </Card>
           <Card className="!p-4">

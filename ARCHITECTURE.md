@@ -73,7 +73,7 @@ Componente → Service → Mock/API
 
 ## Credenciais Demo
 
-- **Admin**: admin@sgc.pt / password123
-- **Recrutador**: recruiter@acme.pt / password123
-- **Avaliador**: avaliador@acme.pt / password123
-- **Candidato**: candidato@email.pt / password123
+- **Admin**: admin@sgc.mz / password123
+- **Recrutador**: recruiter@acme.mz / password123
+- **Avaliador**: avaliador@acme.mz / password123
+- **Candidato**: candidato@email.mz / password123

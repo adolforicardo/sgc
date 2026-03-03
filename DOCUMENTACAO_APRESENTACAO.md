@@ -6,7 +6,7 @@
 
 ## 1. O que é o SGC?
 
-O **SGC (Sistema de Gestão de Candidaturas)** é uma plataforma digital pensada para empresas, instituições públicas e privadas gerirem todo o ciclo de recrutamento e seleção de candidatos.
+O **SGC (Sistema de Gestão de Candidaturas)** é uma plataforma digital pensada para empresas, instituições públicas e privadas em Moçambique gerirem todo o ciclo de recrutamento e seleção de candidatos.
 
 Permite publicar vagas, receber candidaturas, avaliar candidatos e acompanhar todo o processo num único lugar, de forma organizada e transparente.
 
@@ -154,11 +154,11 @@ Para testar o sistema, pode usar os seguintes perfis (palavra-passe: **password1
 
 | Perfil | Email |
 |--------|-------|
-| Super Admin | admin@sgc.pt |
-| Admin da Organização | org-admin@acme.pt |
-| Recrutador | recruiter@acme.pt |
-| Avaliador | avaliador@acme.pt |
-| Candidato | candidato@email.pt |
+| Super Admin | admin@sgc.mz |
+| Admin da Organização | org-admin@acme.mz |
+| Recrutador | recruiter@acme.mz |
+| Avaliador | avaliador@acme.mz |
+| Candidato | candidato@email.mz |
 
 Na página de login, pode clicar num perfil para preencher os campos automaticamente ou em "Entrar" para aceder diretamente.
 

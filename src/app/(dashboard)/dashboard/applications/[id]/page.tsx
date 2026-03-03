@@ -89,7 +89,7 @@ export default function ApplicationDetailPage() {
           <div className="flex items-center gap-4 mb-6">
             <StatusBadge status={application.status} />
             <span className="text-slate-500">
-              Submetida em {new Date(application.submittedAt).toLocaleString('pt-PT')}
+              Submetida em {new Date(application.submittedAt).toLocaleString('pt-MZ')}
             </span>
           </div>
 
@@ -102,7 +102,7 @@ export default function ApplicationDetailPage() {
               >
                 <span>{doc.name}</span>
                 <span className="text-sm text-slate-500">
-                  {new Date(doc.uploadedAt).toLocaleDateString('pt-PT')}
+                  {new Date(doc.uploadedAt).toLocaleDateString('pt-MZ')}
                 </span>
               </li>
             ))}
@@ -123,7 +123,7 @@ export default function ApplicationDetailPage() {
                   <div>
                     <p className="font-medium">{event.description}</p>
                     <p className="text-sm text-slate-500">
-                      {new Date(event.createdAt).toLocaleString('pt-PT')}
+                      {new Date(event.createdAt).toLocaleString('pt-MZ')}
                     </p>
                   </div>
                 </div>

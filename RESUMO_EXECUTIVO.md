@@ -2,7 +2,7 @@
 
 ## O que é?
 
-**Sistema de Gestão de Candidaturas** — plataforma para empresas e instituições gerirem vagas, candidaturas e avaliações num único lugar.
+**Sistema de Gestão de Candidaturas** — plataforma para empresas e instituições em Moçambique gerirem vagas, candidaturas e avaliações num único lugar.
 
 ---
 
@@ -47,7 +47,7 @@ Empresas, instituições públicas, universidades e associações que precisam d
 ## Demo
 
 **Acesso:** [URL da aplicação]  
-**Credenciais:** admin@sgc.pt / password123 (ou outros perfis na página de login)
+**Credenciais:** admin@sgc.mz / password123 (ou outros perfis na página de login)
 
 ---
 

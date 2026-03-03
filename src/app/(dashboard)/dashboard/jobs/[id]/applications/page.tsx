@@ -75,7 +75,7 @@ export default function JobApplicationsPage() {
       header: 'Submetida',
       render: (app: Application) => (
         <span className="text-slate-600">
-          {new Date(app.submittedAt).toLocaleString('pt-PT')}
+          {new Date(app.submittedAt).toLocaleString('pt-MZ')}
         </span>
       ),
     },

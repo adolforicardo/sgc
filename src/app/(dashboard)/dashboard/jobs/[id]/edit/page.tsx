@@ -111,7 +111,7 @@ export default function EditJobPage() {
             <div className="flex items-center gap-3 mb-6 pb-6 border-b border-slate-200">
               <StatusBadge status={job.status} />
               <span className="text-sm text-slate-500">
-                Última atualização: {new Date(job.updatedAt).toLocaleString('pt-PT')}
+                Última atualização: {new Date(job.updatedAt).toLocaleString('pt-MZ')}
               </span>
             </div>
 

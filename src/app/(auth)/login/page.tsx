@@ -97,7 +97,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="nome@empresa.pt"
+                placeholder="nome@empresa.mz"
                 required
                 autoComplete="email"
               />
@@ -146,11 +146,11 @@ export default function LoginPage() {
               <p className="text-[11px] text-slate-500 mb-2">Clique no perfil para preencher, ou em &quot;Entrar&quot; para aceder:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                 {[
-                  { email: 'admin@sgc.pt', password: 'password123', label: 'Super Admin', role: 'SUPER_ADMIN' },
-                  { email: 'org-admin@acme.pt', password: 'password123', label: 'Admin Org.', role: 'ORGANIZATION_ADMIN' },
-                  { email: 'recruiter@acme.pt', password: 'password123', label: 'Recrutador', role: 'RECRUITER' },
-                  { email: 'avaliador@acme.pt', password: 'password123', label: 'Avaliador', role: 'EVALUATOR' },
-                  { email: 'candidato@email.pt', password: 'password123', label: 'Candidato', role: 'CANDIDATE' },
+                  { email: 'admin@sgc.mz', password: 'password123', label: 'Super Admin', role: 'SUPER_ADMIN' },
+                  { email: 'org-admin@acme.mz', password: 'password123', label: 'Admin Org.', role: 'ORGANIZATION_ADMIN' },
+                  { email: 'recruiter@acme.mz', password: 'password123', label: 'Recrutador', role: 'RECRUITER' },
+                  { email: 'avaliador@acme.mz', password: 'password123', label: 'Avaliador', role: 'EVALUATOR' },
+                  { email: 'candidato@email.mz', password: 'password123', label: 'Candidato', role: 'CANDIDATE' },
                 ].map((demo) => (
                   <div
                     key={demo.email}

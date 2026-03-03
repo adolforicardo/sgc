@@ -34,7 +34,7 @@ export const mockOrganizations: Organization[] = [
 export const mockUsers: User[] = [
   {
     id: 'user-1',
-    email: 'admin@sgc.pt',
+    email: 'admin@sgc.mz',
     name: 'Administrador Sistema',
     role: 'SUPER_ADMIN',
     organizationId: null,
@@ -44,7 +44,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-2',
-    email: 'recruiter@acme.pt',
+    email: 'recruiter@acme.mz',
     name: 'Maria Recrutadora',
     role: 'RECRUITER',
     organizationId: 'org-1',
@@ -54,7 +54,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-3',
-    email: 'avaliador@acme.pt',
+    email: 'avaliador@acme.mz',
     name: 'João Avaliador',
     role: 'EVALUATOR',
     organizationId: 'org-1',
@@ -64,7 +64,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-4',
-    email: 'candidato@email.pt',
+    email: 'candidato@email.mz',
     name: 'Pedro Candidato',
     role: 'CANDIDATE',
     organizationId: null,
@@ -74,7 +74,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-5',
-    email: 'org-admin@acme.pt',
+    email: 'org-admin@acme.mz',
     name: 'Ana Administradora',
     role: 'ORGANIZATION_ADMIN',
     organizationId: 'org-1',
@@ -84,7 +84,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-6',
-    email: 'sofia.silva@email.pt',
+    email: 'sofia.silva@email.mz',
     name: 'Sofia Silva',
     role: 'CANDIDATE',
     organizationId: null,
@@ -94,7 +94,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-7',
-    email: 'ricardo.ferreira@email.pt',
+    email: 'ricardo.ferreira@email.mz',
     name: 'Ricardo Ferreira',
     role: 'CANDIDATE',
     organizationId: null,
@@ -241,11 +241,11 @@ export const mockEvaluations: Evaluation[] = [
   },
 ];
 
-// Mock password for demo (admin@sgc.pt / password123)
+// Mock password for demo (admin@sgc.mz / password123)
 export const MOCK_AUTH_CREDENTIALS: Record<string, string> = {
-  'admin@sgc.pt': 'password123',
-  'recruiter@acme.pt': 'password123',
-  'avaliador@acme.pt': 'password123',
-  'candidato@email.pt': 'password123',
-  'org-admin@acme.pt': 'password123',
+  'admin@sgc.mz': 'password123',
+  'recruiter@acme.mz': 'password123',
+  'avaliador@acme.mz': 'password123',
+  'candidato@email.mz': 'password123',
+  'org-admin@acme.mz': 'password123',
 };

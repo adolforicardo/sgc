@@ -30,12 +30,12 @@ const columns = [
   {
     key: 'deadline',
     header: 'Prazo',
-    render: (job: Job) => new Date(job.deadline).toLocaleDateString('pt-PT'),
+    render: (job: Job) => new Date(job.deadline).toLocaleDateString('pt-MZ'),
   },
   {
     key: 'createdAt',
     header: 'Criada em',
-    render: (job: Job) => new Date(job.createdAt).toLocaleDateString('pt-PT'),
+    render: (job: Job) => new Date(job.createdAt).toLocaleDateString('pt-MZ'),
   },
 ];
 

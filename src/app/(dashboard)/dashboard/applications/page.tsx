@@ -28,7 +28,7 @@ const baseColumns = [
   {
     key: 'submittedAt',
     header: 'Submetida em',
-    render: (app: Application) => new Date(app.submittedAt).toLocaleDateString('pt-PT'),
+    render: (app: Application) => new Date(app.submittedAt).toLocaleDateString('pt-MZ'),
   },
   {
     key: 'documents',

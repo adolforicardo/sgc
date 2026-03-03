@@ -46,7 +46,7 @@ export default function EvaluationsPage() {
     {
       key: 'submittedAt',
       header: 'Submetida',
-      render: (a: Application) => new Date(a.submittedAt).toLocaleDateString('pt-PT'),
+      render: (a: Application) => new Date(a.submittedAt).toLocaleDateString('pt-MZ'),
     },
   ];
 
