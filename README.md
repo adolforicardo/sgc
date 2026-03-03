@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SGC - Arquitetura do Sistema
 
-## Getting Started
+## Visão Geral
 
-First, run the development server:
+O Sistema de Gestão de Candidaturas (SGC) segue uma arquitetura limpa adaptada ao frontend, com separação clara entre domínio, aplicação, infraestrutura e apresentação.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Estrutura de Pastas
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── (auth)/             # Rotas públicas (login)
+│   ├── (dashboard)/        # Rotas protegidas
+│   └── layout.tsx
+├── core/
+│   ├── domain/             # Regras de negócio, constantes
+│   └── infrastructure/      # API client, interceptors, utils
+├── modules/                # Módulos por feature (extensível)
+├── mocks/                   # Dados mock - NUNCA acessados por componentes
+├── services/                # Camada de serviços (abstração de dados)
+├── shared/
+│   ├── components/         # UI reutilizável
+│   └── context/           # Contextos React (Auth)
+└── types/                  # Definições TypeScript globais
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Camadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Domain (core/domain)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Constantes de negócio
+- Tipos de domínio (em /types)
+- Regras invariantes
 
-## Learn More
+### 2. Infrastructure (core/infrastructure)
 
-To learn more about Next.js, take a look at the following resources:
+- **apiClient.ts**: Cliente HTTP centralizado, pronto para REST
+- **endpoints.ts**: Configuração central de URLs
+- **interceptors.ts**: Estrutura para JWT, retry, logging
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Services (services/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Abstração de acesso a dados
+- Componentes **nunca** importam de /mocks
+- Quando o backend existir: trocar implementação mantendo interface
 
-## Deploy on Vercel
+### 4. Presentation (app/, shared/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Componentes React
+- Páginas Next.js
+- Sem lógica de negócio complexa
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Fluxo de Dados
+
+```
+Componente → Service → Mock/API
+                ↓
+            types (contratos)
+```
+
+## Integração Futura com API
+
+1. Configurar `NEXT_PUBLIC_API_URL` no ambiente
+2. Implementar serviços reais que usam `apiClient`
+3. Ativar interceptors para JWT em `interceptors.ts`
+4. Remover ou desativar imports de mocks nos serviços
+
+## Perfis e Permissões (RBAC)
+
+| Perfil             | Dashboard | Vagas | Candidaturas | Avaliações | Utilizadores |
+| ------------------ | --------- | ----- | ------------ | ---------- | ------------ |
+| SUPER_ADMIN        | ✓         | ✓     | ✓            | ✓          | ✓            |
+| ORGANIZATION_ADMIN | ✓         | ✓     | ✓            | ✓          | ✓            |
+| RECRUITER          | ✓         | ✓     | ✓            | ✓          | -            |
+| EVALUATOR          | ✓         | -     | ✓            | ✓          | -            |
+| CANDIDATE          | -         | -     | ✓ (próprias) | -          | -            |
+
+## Credenciais Demo
+
+- **Admin**: admin@sgc.pt / password123
+- **Recrutador**: recruiter@acme.pt / password123
+- **Avaliador**: avaliador@acme.pt / password123
+- **Candidato**: candidato@email.pt / password123
