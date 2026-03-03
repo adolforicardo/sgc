@@ -34,7 +34,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
       <div className="flex-1 flex flex-col min-w-0">
         <TopBar />
         <main className="flex-1 overflow-auto">
-          <div className="p-6 lg:p-8">{children}</div>
+          <div className="p-4 lg:p-5">{children}</div>
         </main>
       </div>
     </div>

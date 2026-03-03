@@ -17,7 +17,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full">
         {label && (
-          <label htmlFor={inputId} className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor={inputId} className="block text-xs font-medium text-slate-700 mb-0.5">
             {label}
           </label>
         )}
@@ -31,13 +31,13 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             id={inputId}
             className={`
-              w-full rounded-lg border px-4 py-2.5 text-slate-900
+              w-full rounded-md border px-3 py-2 text-sm text-slate-900
               placeholder:text-slate-400
               focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent
               disabled:bg-slate-50 disabled:text-slate-500 disabled:cursor-not-allowed
               ${error ? 'border-red-500' : 'border-slate-300'}
-              ${leftIcon ? 'pl-10' : ''}
-              ${rightIcon ? 'pr-10' : ''}
+              ${leftIcon ? 'pl-8' : ''}
+              ${rightIcon ? 'pr-8' : ''}
               ${className}
             `}
             aria-invalid={!!error}
@@ -51,12 +51,12 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {error && (
-          <p id={`${inputId}-error`} className="mt-1 text-sm text-red-600">
+          <p id={`${inputId}-error`} className="mt-0.5 text-xs text-red-600">
             {error}
           </p>
         )}
         {hint && !error && (
-          <p id={`${inputId}-hint`} className="mt-1 text-sm text-slate-500">
+          <p id={`${inputId}-hint`} className="mt-0.5 text-xs text-slate-500">
             {hint}
           </p>
         )}

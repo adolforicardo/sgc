@@ -15,9 +15,9 @@ const variantStyles: Record<NonNullable<CardProps['variant']>, string> = {
 
 const paddingStyles: Record<NonNullable<CardProps['padding']>, string> = {
   none: '',
-  sm: 'p-4',
-  md: 'p-6',
-  lg: 'p-8',
+  sm: 'p-3',
+  md: 'p-4',
+  lg: 'p-5',
 };
 
 export function Card({
@@ -29,7 +29,7 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`rounded-xl ${variantStyles[variant]} ${paddingStyles[padding]} ${className}`}
+      className={`rounded-lg ${variantStyles[variant]} ${paddingStyles[padding]} ${className}`}
       {...props}
     >
       {children}
@@ -49,10 +49,10 @@ export function CardHeader({
   className?: string;
 }) {
   return (
-    <div className={`flex items-start justify-between gap-4 ${className}`}>
+    <div className={`flex items-start justify-between gap-3 ${className}`}>
       <div>
-        <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-        {subtitle && <p className="mt-0.5 text-sm text-slate-500">{subtitle}</p>}
+        <h3 className="text-base font-semibold text-slate-900">{title}</h3>
+        {subtitle && <p className="mt-0.5 text-xs text-slate-500">{subtitle}</p>}
       </div>
       {action}
     </div>

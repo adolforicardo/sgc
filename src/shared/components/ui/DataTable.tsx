@@ -35,7 +35,7 @@ export function DataTable<T>({
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className={`px-6 py-4 text-left text-xs font-medium text-slate-500 uppercase tracking-wider ${col.className || ''}`}
+                  className={`px-4 py-2.5 text-left text-[11px] font-medium text-slate-500 uppercase tracking-wider ${col.className || ''}`}
                 >
                   {col.header}
                 </th>
@@ -46,8 +46,8 @@ export function DataTable<T>({
             {Array.from({ length: 5 }).map((_, i) => (
               <tr key={i}>
                 {columns.map((col) => (
-                  <td key={col.key} className="px-6 py-4">
-                    <div className="h-4 bg-slate-200 rounded animate-pulse" />
+                  <td key={col.key} className="px-4 py-2.5">
+                    <div className="h-3 bg-slate-200 rounded animate-pulse" />
                   </td>
                 ))}
               </tr>
@@ -60,29 +60,29 @@ export function DataTable<T>({
 
   if (data.length === 0) {
     return (
-      <div className="py-16 px-6">
+      <div className="py-10 px-4">
         <div className="flex flex-col items-center justify-center text-center">
-          <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mb-4">
-            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center mb-3">
+            <svg className="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
             </svg>
           </div>
-          <p className="text-slate-600 font-medium">{emptyMessage}</p>
-          <p className="text-sm text-slate-400 mt-1">Ajuste os filtros ou adicione novos dados</p>
+          <p className="text-slate-600 font-medium text-sm">{emptyMessage}</p>
+          <p className="text-xs text-slate-400 mt-0.5">Ajuste os filtros ou adicione novos dados</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-200">
+    <div className="overflow-x-auto rounded-md border border-slate-200">
       <table className="min-w-full divide-y divide-slate-200">
         <thead className="bg-slate-50">
           <tr>
             {columns.map((col) => (
               <th
                 key={col.key}
-                className={`px-6 py-4 text-left text-xs font-medium text-slate-600 uppercase tracking-wider ${col.className || ''}`}
+                className={`px-4 py-2.5 text-left text-[11px] font-medium text-slate-600 uppercase tracking-wider ${col.className || ''}`}
               >
                 {col.header}
               </th>
@@ -104,7 +104,7 @@ export function DataTable<T>({
                 return (
                   <td
                     key={col.key}
-                    className={`px-6 py-4 text-sm text-slate-900 ${col.className || ''}`}
+                    className={`px-4 py-2.5 text-xs text-slate-900 ${col.className || ''}`}
                   >
                     {content}
                   </td>
@@ -137,8 +137,8 @@ export function Pagination({
   const end = Math.min(page * pageSize, total);
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 border-t border-slate-200 bg-slate-50">
-      <p className="text-sm text-slate-600">
+    <div className="flex items-center justify-between px-4 py-2 border-t border-slate-200 bg-slate-50">
+      <p className="text-xs text-slate-600">
         A mostrar <span className="font-medium">{start}</span> a{' '}
         <span className="font-medium">{end}</span> de{' '}
         <span className="font-medium">{total}</span> resultados
@@ -147,17 +147,17 @@ export function Pagination({
         <button
           onClick={() => onPageChange(page - 1)}
           disabled={page <= 1}
-          className="px-3 py-1 rounded border border-slate-300 text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-100"
+          className="px-2 py-0.5 rounded border border-slate-300 text-xs disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-100"
         >
           Anterior
         </button>
-        <span className="px-3 py-1 text-sm text-slate-600">
+        <span className="px-2 py-0.5 text-xs text-slate-600">
           Página {page} de {totalPages || 1}
         </span>
         <button
           onClick={() => onPageChange(page + 1)}
           disabled={page >= totalPages}
-          className="px-3 py-1 rounded border border-slate-300 text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-100"
+          className="px-2 py-0.5 rounded border border-slate-300 text-xs disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-100"
         >
           Seguinte
         </button>

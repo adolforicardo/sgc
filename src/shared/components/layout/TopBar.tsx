@@ -28,8 +28,8 @@ export function TopBar() {
       .slice(0, 2);
 
   return (
-    <header className="sticky top-0 z-40 h-16 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
-      <div className="h-full px-6 flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-40 h-12 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+      <div className="h-full px-4 flex items-center justify-between gap-3">
         <form onSubmit={handleSearch} className="flex-1 max-w-md">
           <div className="relative">
             <input
@@ -37,10 +37,10 @@ export function TopBar() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Pesquisar vagas, candidaturas..."
-              className="w-full h-10 pl-10 pr-4 rounded-lg bg-slate-100/80 border border-slate-200 text-slate-900 placeholder:text-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+              className="w-full h-8 pl-8 pr-3 rounded-md bg-slate-100/80 border border-slate-200 text-slate-900 placeholder:text-slate-500 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
             />
             <svg
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"
+              className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -53,10 +53,10 @@ export function TopBar() {
         <div className="flex items-center gap-2">
           <Link
             href={ROUTES.DASHBOARD}
-            className="p-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+            className="p-1.5 rounded-md text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors"
             title="Dashboard"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
           </Link>
@@ -64,9 +64,9 @@ export function TopBar() {
           <div className="relative">
             <button
               onClick={() => setShowUserMenu(!showUserMenu)}
-              className="flex items-center gap-3 pl-2 pr-3 py-2 rounded-lg hover:bg-slate-100 transition-colors"
+              className="flex items-center gap-2 pl-1.5 pr-2 py-1.5 rounded-md hover:bg-slate-100 transition-colors"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm font-semibold">
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-xs font-semibold">
                 {user ? getInitials(user.name) : '?'}
               </div>
               <div className="text-left hidden sm:block">
@@ -81,21 +81,21 @@ export function TopBar() {
             {showUserMenu && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => setShowUserMenu(false)} />
-                <div className="absolute right-0 mt-2 w-56 rounded-xl bg-white border border-slate-200 shadow-xl py-2 z-50">
-                  <div className="px-4 py-3 border-b border-slate-100">
+                <div className="absolute right-0 mt-1.5 w-48 rounded-lg bg-white border border-slate-200 shadow-xl py-1.5 z-50">
+                  <div className="px-3 py-2 border-b border-slate-100">
                     <p className="text-sm font-medium text-slate-900">{user?.name}</p>
                     <p className="text-xs text-slate-500 truncate">{user?.email}</p>
                   </div>
                   <Link
                     href={ROUTES.DASHBOARD}
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
+                    className="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-50"
                     onClick={() => setShowUserMenu(false)}
                   >
                     Dashboard
                   </Link>
                   <Link
                     href={ROUTES.REPORTS}
-                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
+                    className="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-50"
                     onClick={() => setShowUserMenu(false)}
                   >
                     Relatórios
@@ -106,7 +106,7 @@ export function TopBar() {
                       setShowUserMenu(false);
                       logout().then(() => { window.location.href = '/login'; });
                     }}
-                    className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+                    className="block w-full text-left px-3 py-1.5 text-xs text-red-600 hover:bg-red-50"
                   >
                     Terminar sessão
                   </button>

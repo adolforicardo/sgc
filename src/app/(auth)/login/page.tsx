@@ -34,64 +34,64 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex">
       {/* Left panel - Branding */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 p-12 flex-col justify-between">
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 p-8 flex-col justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">SGC</h1>
-          <p className="text-slate-300 mt-1">Sistema de Gestão de Candidaturas</p>
+          <h1 className="text-2xl font-bold text-white tracking-tight">SGC</h1>
+          <p className="text-slate-300 mt-0.5 text-sm">Sistema de Gestão de Candidaturas</p>
         </div>
-        <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="space-y-4">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center shrink-0">
+              <svg className="w-4 h-4 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div>
-              <h3 className="font-semibold text-white">Gestão de Vagas</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Publique e gere oportunidades de forma centralizada</p>
+              <h3 className="text-sm font-semibold text-white">Gestão de Vagas</h3>
+              <p className="text-xs text-slate-400 mt-0.5">Publique e gere oportunidades de forma centralizada</p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center shrink-0">
+              <svg className="w-4 h-4 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
             <div>
-              <h3 className="font-semibold text-white">Candidaturas Inteligentes</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Triagem, avaliação e workflow automatizado</p>
+              <h3 className="text-sm font-semibold text-white">Candidaturas Inteligentes</h3>
+              <p className="text-xs text-slate-400 mt-0.5">Triagem, avaliação e workflow automatizado</p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-              <svg className="w-5 h-5 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center shrink-0">
+              <svg className="w-4 h-4 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
             <div>
-              <h3 className="font-semibold text-white">Relatórios Analíticos</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Dashboards e métricas em tempo real</p>
+              <h3 className="text-sm font-semibold text-white">Relatórios Analíticos</h3>
+              <p className="text-xs text-slate-400 mt-0.5">Dashboards e métricas em tempo real</p>
             </div>
           </div>
         </div>
-        <p className="text-slate-500 text-sm">
+        <p className="text-slate-500 text-xs">
           © 2026 SGC. Solução enterprise para recrutamento.
         </p>
       </div>
 
       {/* Right panel - Login form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-[#fafbfc]">
-        <div className="w-full max-w-md">
-          <div className="lg:hidden text-center mb-8">
-            <h1 className="text-2xl font-bold text-slate-900">SGC</h1>
-            <p className="text-slate-600 mt-1">Sistema de Gestão de Candidaturas</p>
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-6 bg-[#fafbfc]">
+        <div className="w-full max-w-sm">
+          <div className="lg:hidden text-center mb-6">
+            <h1 className="text-xl font-bold text-slate-900">SGC</h1>
+            <p className="text-slate-600 mt-0.5 text-sm">Sistema de Gestão de Candidaturas</p>
           </div>
 
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 p-8">
-            <h2 className="text-xl font-semibold text-slate-900">Entrar na sua conta</h2>
-            <p className="text-slate-500 mt-1 text-sm">Introduza as suas credenciais para aceder ao sistema</p>
+          <div className="bg-white rounded-xl border border-slate-200 shadow-xl shadow-slate-200/50 p-6">
+            <h2 className="text-lg font-semibold text-slate-900">Entrar na sua conta</h2>
+            <p className="text-slate-500 mt-0.5 text-xs">Introduza as suas credenciais para aceder ao sistema</p>
 
-            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+            <form onSubmit={handleSubmit} className="mt-6 space-y-4">
               <Input
                 label="Endereço de email"
                 type="email"
@@ -141,10 +141,10 @@ export default function LoginPage() {
               </Button>
             </form>
 
-            <div className="mt-8 pt-6 border-t border-slate-100">
-              <p className="text-xs font-medium text-slate-600 mb-3">Credenciais de demonstração</p>
-              <p className="text-xs text-slate-500 mb-3">Clique no perfil para preencher os campos, ou em &quot;Entrar&quot; para aceder diretamente:</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="mt-6 pt-4 border-t border-slate-100">
+              <p className="text-[11px] font-medium text-slate-600 mb-2">Credenciais de demonstração</p>
+              <p className="text-[11px] text-slate-500 mb-2">Clique no perfil para preencher, ou em &quot;Entrar&quot; para aceder:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                 {[
                   { email: 'admin@sgc.pt', password: 'password123', label: 'Super Admin', role: 'SUPER_ADMIN' },
                   { email: 'org-admin@acme.pt', password: 'password123', label: 'Admin Org.', role: 'ORGANIZATION_ADMIN' },
@@ -154,7 +154,7 @@ export default function LoginPage() {
                 ].map((demo) => (
                   <div
                     key={demo.email}
-                    className="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50/50 hover:bg-indigo-50/80 hover:border-indigo-200 transition-colors group"
+                    className="flex items-center gap-2 p-2 rounded-md border border-slate-200 bg-slate-50/50 hover:bg-indigo-50/80 hover:border-indigo-200 transition-colors group"
                   >
                     <button
                       type="button"
@@ -165,12 +165,12 @@ export default function LoginPage() {
                       }}
                       className="flex items-center gap-2 min-w-0 flex-1 text-left"
                     >
-                      <span className="w-8 h-8 rounded-md bg-slate-200 group-hover:bg-indigo-200 flex items-center justify-center text-xs font-bold text-slate-600 group-hover:text-indigo-700 flex-shrink-0">
+                      <span className="w-6 h-6 rounded bg-slate-200 group-hover:bg-indigo-200 flex items-center justify-center text-[10px] font-bold text-slate-600 group-hover:text-indigo-700 shrink-0">
                         {demo.role.slice(0, 2)}
                       </span>
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-medium text-slate-700 truncate">{demo.label}</p>
-                        <p className="text-xs text-slate-500 truncate">{demo.email}</p>
+                        <p className="text-xs font-medium text-slate-700 truncate">{demo.label}</p>
+                        <p className="text-[11px] text-slate-500 truncate">{demo.email}</p>
                       </div>
                     </button>
                     <button
@@ -190,7 +190,7 @@ export default function LoginPage() {
                         setIsSubmitting(false);
                       }}
                       disabled={isSubmitting}
-                      className="px-2 py-1 text-xs font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-md transition-colors flex-shrink-0 disabled:opacity-50"
+                      className="px-1.5 py-0.5 text-[11px] font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-100 rounded transition-colors shrink-0 disabled:opacity-50"
                     >
                       Entrar
                     </button>

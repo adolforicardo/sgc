@@ -12,16 +12,16 @@ export interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, breadcrumbs, actions }: PageHeaderProps) {
   return (
-    <header className="mb-8">
+    <header className="mb-5">
       {breadcrumbs && breadcrumbs.length > 0 && (
-        <div className="mb-4">
+        <div className="mb-2">
           <Breadcrumbs items={breadcrumbs} />
         </div>
       )}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{title}</h1>
-          {subtitle && <p className="mt-1 text-slate-600">{subtitle}</p>}
+          <h1 className="text-xl font-bold text-slate-900 tracking-tight">{title}</h1>
+          {subtitle && <p className="mt-0.5 text-sm text-slate-600">{subtitle}</p>}
         </div>
         {actions && <div className="flex items-center gap-2">{actions}</div>}
       </div>

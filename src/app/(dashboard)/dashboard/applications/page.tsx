@@ -85,14 +85,14 @@ export default function ApplicationsPage() {
         ]}
       />
 
-      <div className="mb-6 flex justify-end">
+      <div className="mb-4 flex justify-end">
         <select
           value={statusFilter}
           onChange={(e) => {
             setStatusFilter(e.target.value as ApplicationStatus | '');
             setPage(1);
           }}
-          className="h-10 px-4 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm focus:ring-2 focus:ring-indigo-500/20"
+          className="h-8 px-3 rounded-md border border-slate-200 bg-white text-slate-700 text-xs focus:ring-2 focus:ring-indigo-500/20"
         >
           {STATUS_OPTIONS.map((f) => (
             <option key={f.value || 'all'} value={f.value}>{f.label}</option>
@@ -100,7 +100,7 @@ export default function ApplicationsPage() {
         </select>
       </div>
 
-      <div className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div className="rounded-lg border border-slate-200 bg-white shadow-sm overflow-hidden">
         <DataTable
         data={applications}
         columns={columnsWithJobTitle}

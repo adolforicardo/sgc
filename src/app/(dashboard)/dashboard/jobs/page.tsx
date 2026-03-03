@@ -96,14 +96,14 @@ function JobsPageContent() {
         }
       />
 
-      <div className="mb-6 flex flex-col sm:flex-row gap-4">
+      <div className="mb-4 flex flex-col sm:flex-row gap-3">
         <form onSubmit={handleSearch} className="flex-1 flex gap-2">
           <input
             type="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Pesquisar por título ou descrição..."
-            className="flex-1 h-10 px-4 rounded-lg border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+            className="flex-1 h-8 px-3 rounded-md border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
           />
           <Button type="submit" variant="secondary">Pesquisar</Button>
         </form>
@@ -113,7 +113,7 @@ function JobsPageContent() {
             setStatusFilter(e.target.value as JobStatus | '');
             setPage(1);
           }}
-          className="h-10 px-4 rounded-lg border border-slate-200 bg-white text-slate-700 text-sm focus:ring-2 focus:ring-indigo-500/20"
+          className="h-8 px-3 rounded-md border border-slate-200 bg-white text-slate-700 text-xs focus:ring-2 focus:ring-indigo-500/20"
         >
           {STATUS_FILTERS.map((f) => (
             <option key={f.value || 'all'} value={f.value}>{f.label}</option>
@@ -121,7 +121,7 @@ function JobsPageContent() {
         </select>
       </div>
 
-      <div className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div className="rounded-lg border border-slate-200 bg-white shadow-sm overflow-hidden">
         <DataTable
           data={jobs}
           columns={columns}
